@@ -20,9 +20,9 @@ A. Lancez VMware Workstation Player (logiciel)
 B. Sélectionnez **Create a New Virtual Machine**
  
 C. Placez le fichier `.iso` dans une repertoire connu :
- 
-`C:SPY`
- 
+
+`C:AOD`
+
 D. Indiquez le chemin d’accès de l’image iso comme indiqué sous l’image ci-dessous :
  
 ![install image disk](/Images/Install_ISO.jpg)
@@ -53,7 +53,7 @@ G. Lancement du live CD :
  
 Shell Linux :
  
-[Placer votre capture d'écran](/Images/Shell_Linux.png)
+ [Placer votre capture d'écran](/Images/Shell_Linux.png)
  
 > **ATTENTION** : par défaut, le clavier est configuré est **Clavier Americain**
  
@@ -79,7 +79,7 @@ I. Affichez le contenu de la racine avec la commande : `ls –l`
 ![Placer votre capture d'écran]()
  
 Q5. Que signifie l'option `-l` avec la commande `ls`
- 
+
 > c'est le format long de la commande ls, elle affiche les informations pour chaque fichier ou répertoire.
  
 Q6. Décrypter la ligne où se trouve le répertoire **home**    
