@@ -49,11 +49,11 @@ H. Lancez la machine virtuelle : **Play virtual machine**
  
 G. Lancement du live CD :
  
-[Placer votre capture d'écran]()
+![Lancement_du_Live_CD](/Images/Lancement_du_live_CD.png)
  
 Shell Linux :
  
- [Placer votre capture d'écran](/Images/Shell_Linux.png)
+![Shell_Linux](/Images/Shell_Linux.png)
  
 > **ATTENTION** : par défaut, le clavier est configuré est **Clavier Americain**
  
@@ -76,7 +76,7 @@ H. Déplacez-vous à la **racine du système** en utilisant la commande suivante
  
 I. Affichez le contenu de la racine avec la commande : `ls –l`	
  
-![Placer votre capture d'écran]()
+![Racine_ls-l](/Images/Contenu_racine.png)
  
 Q5. Que signifie l'option `-l` avec la commande `ls`
 
@@ -84,29 +84,39 @@ Q5. Que signifie l'option `-l` avec la commande `ls`
  
 Q6. Décrypter la ligne où se trouve le répertoire **home**    
  
-[Placer votre capture d'écran](/Images/Ligne_home.png)
+![Repertoire_home](/Images/Ligne_home.png)
  
 > d = indicateur de type de fichier la on se trouve dans le répertoire
+
 > rwx = privilège que peux avoir l'utilisateur sur ce répertoire, ici on peut lire(r) écrire(w) executer(x)
+
 > r-x = privilège que le groupe peut avoir sur ce répertoire, ici on peut lire(r) impossible d'écrire(-) executer(x)
+
 > r-x = privilège qu'un utilisateur partagé peut avoir su ce répertoire, ici on peut lire(r) impossible d'écrire(-) executer(x)
+
 > 1 = Le nbr d'accès
+
 > root = racine utilisateur
+
 > root = racine groupe
+
 > 60 = espace mémoire utilisée 60 Mo
+
 > Sep 18 = date du dernier acces ou modif de ce répertoire, ici c'est le 18 Septembre
+
 > 14:04 = heure selon la date du dernier acces ou modif de ce répertoire, ici c'est à 14H04
+
 > home = nom du répertoire
  
 J. Créez un répertoire de travail nommé « EMSY_VosInitiales» dans quel dossier racine allez-vous le placer (justifiez votre réponse) et quelle commande allez-vous utiliser.
  
 > Dans le dossier home/live car on peut facilement y accéder et on arrive dessus lors du lancement de la machine virtuel.
+
 > On utilise la commande "mkdir EMSY_SPY-AOD"
  
 Q7. Si vous créez un répertoire de travail (pour éditer/sauvegarder des fichiers), dans quelle **répertoire racine** vous vous placez ?
  
 > On le mettrait dans un répertoire qui n'est pas sensible à des erreurs de commande ou des suppressions telle le répertoire "home"
- 
  
 K. Dans ce répertoire, créez un fichier texte que vous nommerez `TESTSLO_XXX_XXX` et éditez celui en écrivant un texte, exemple : "TP linux by XXX et XXX".
 	Utiliser la commande `vi`
