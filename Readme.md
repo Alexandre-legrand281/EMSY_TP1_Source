@@ -133,7 +133,7 @@ Q10. Si vous éteignez la machine virtuelle et que vous la rallumez, est-ce que 
  
 L. Tapez la commande `ls -l /dev/sda`
  
-![Placer votre capture d'écran]()
+![Commande_ls_-l](/Images/Commande_ls-l_dev_sda.png)
  
 Q11. Que signifie **sda** ?
  
@@ -151,6 +151,100 @@ Q12. Décrypter la réponse après avoir taper la commande `ls -l /dev/sda` -> v
 > disk = block SCSI.
 > 8 = numéro majeur, il indique le pilote utilisé gérer le matériel.
 > 0 = numéro mineur, il est donné par le pilote pour distingué le matériel qu'il contrôle.
+
+M. Pour cela, il faut lancer l'"Instaeller" fourni avec le live-cd. Pour vous aider à réaliser cette installation, regardez les pages Wiki de la distribution de Sparky (aide).
+(https://wiki.sparkylinux.org/doku.php/start)
+
+Q13. Quelle est la taille de disque minimum recommandée pour installer la distribution Sparky?
+
+> Il est recommandée d'avoir au minimum 2Go
+
+Partition 1: env.50% du disque (~10Go) -> Système de fichiers Linux
+
+Partition 2: env.25% du disque (~5Go) -> Partition d'échange (swap)
+
+Partition 3: le reste sera utilisé pour un système de fichiers dans un format Linux
+
+Q14. A quoi sert la partition swap? Est-ce que ce principe existe sur les OS Microsoft Windows?
+
+> Quand la RAM est saturée, le noyau Linux déplace certaines données peu utilisées vers la swap pour libèrer de la RAM pour les applications actives. Ce principe existe egalement sur les OS Microsoft Windows, mais Windows ne crée pas de partition swap
+
+Q15. Quel format pourriez-vous utiliser pour la 3eme partition afin qu'elle soit également accessible depuis un OS Microsoft?
+
+> exFAT
+
+Q16. Durant l'installation, on vous demande deux noms d'utilisateur. A quoi correspondent-ils?
+
+> Le premier nom est le nom de la machine et le deuxieme est le nom de l'utilisateur
+
+N. Après l'installation de Linux, prenez une capture d'écran du démarrage de votre systéme (GRUB)
+
+![Login_AOD](/Images/Login_AOD.png)
+
+O. Trouvez la ou les lignes de commande permettant de changer le clavier (clavier suisse romand trouvable sous "German (Switzerland)" et procédez à la configuration du clavier.
+
+> sudo loadkeys fr_CH-latin1
+> sudo dpkg-reconfigure keyboard-configuration
+
+P. Testez si l'application "nano" est installée sur votre machine, tapez la commande: nano -version
+
+Q17. À quoi sert "nano"?
+
+> Elle permet d'editer qui permet d'ouvrir et de modifier les fichiers .txt et peut egalement éditer des texts en ligne de commande
+
+Q. Testez si l'application "git" est installée sur votre distribution, si ce n'est pas le cas installez un client git.
+
+Q18. Comment savoir si "git" est déjà installé?
+
+> apt list --installed | grep git
+
+Q19. Quelle(s) commande(s) utilisez-vous pour l'installer?
+
+> sudo apt install git
+
+Q20. Que veut dire "apt"?
+
+> Advanced Package Tool, c'est le gestionnaire de paquets avec une interface utilisateur de haut niveau basé sur dpkg
+
+Q21. Est-ce que cette commande peut être utilisée sur toutes les distributions Linux?
+
+>Non, la distribution Debian 2.0 ne puisse l'utiliser
+
+R. Créez un sous-répertoire "EMSY_TP1_XXX-YYY" dans le répertoire de votre utilisateur.
+ATTENTION: Ici on veut que l'utilisateur (vous) ait les droits de lecture, d'écriture et d'exécution.
+
+Q22. Quel est le répertoire utilisateur?
+
+> /home/aod
+
+Q23. Quelles sont les commandes que vous allez utiliser?
+
+> sudo mkdir EMSY_TP1_AOD
+
+S. Dans ce répertoire, tapez la commande:
+git clone https://github.com/votreDepot/EMSY_TP1_Source
+Il faut préalable que vous ayez mis en place à cette adresse un fork du dépôt fourni.
+
+Q24. Qu'observez-vous dans votre répertoire?
+
+>
+
+T. Editez le fichier source .c avec l'éditeur de texte "nano".
+Réalisez un petit programme en C (par exemple de type "Hello world")
+
+U. Vérifiez si le compilateur "gcc" est bien installé.
+Notez la version du logiciel.
+Tapez les commandes suivantes:
+gcc -Wall -o fichier.o -c fichier.c
+gcc -o fichier fichier.o
+REMARQUE: "fichier" est à remplacer par le nom de votre choix
+
+Q25. Quels sont les fichiers qui ont été générés?
+
+V. Entrez la commande suivante:
+./fichier
+
+Q26. Que se passe-t-il?
  
 ## Tips
  
